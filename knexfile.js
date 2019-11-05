@@ -1,29 +1,29 @@
 module.exports = {
   development: {
-    client: 'sqlite3',
+    client: "sqlite3",
     connection: {
-      filename: './data/produce.db3',
+      filename: "./data/car-dealer.db3"
     },
     useNullAsDefault: true,
     migrations: {
-      directory: './data/migrations'
+      directory: "./data/migrations"
     },
     seeds: {
-      directory: './data/seeds'
+      directory: "./data/seeds"
     }
   },
 
   production: {
-    client: 'sqlite3',
+    client: "sqlite3",
     connection: {
-      filename: './data/produce-production.db3',
+      filename: "./data/car-dealer-production.db3"
     },
     useNullAsDefault: true,
     migrations: {
-      directory: './data/migrations'
-    },
+      directory: "./data/migrations"
+    }
     // seeds: {
     //   directory: './data/seeds'
     // }
-  },
+  }
 };

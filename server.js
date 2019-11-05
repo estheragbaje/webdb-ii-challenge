@@ -1,13 +1,17 @@
 const express = require("express");
 const helmet = require("helmet");
 
-// const fruitsRouter = require('../fruits/fruits-router.js');
+const carsRouter = require("./cars/cars-router");
 
 const server = express();
 
 server.use(helmet());
 server.use(express.json());
 
-// server.use('/api/fruits', fruitsRouter);
+server.use("/api/cars", carsRouter);
+
+server.get("/", (req, res) => {
+  res.send("<h3>DB Helpers with knex</h3>");
+});
 
 module.exports = server;
